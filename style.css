@@ -24,6 +24,7 @@ body {
   font-weight: 700;
   letter-spacing: -.04em;
 }
+
 .hero-subtitle {
   margin-top: 4px;
   color: rgba(255,255,255,.88);
@@ -35,6 +36,42 @@ body {
   font-weight: 700;
   letter-spacing: .12em;
   text-transform: uppercase;
+}
+.nav-side-pictures {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.nav-side-pictures > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.nav-side-pictures img {
+  width: clamp(100px, 16vw, 220px);
+  border: 2px solid #ba0c2f;
+  border-radius: 8px;
+  background: white;
+}
+
+.nav-side-pictures span {
+  color: #ba0c2f;
+  font-weight: 700;
+}
+
+
+@media (max-width: 700px) {
+  .nav-side-pictures {
+    display: none;
+  }
 }
 .hero .eyebrow { color: rgba(255,255,255,.78); }
 
